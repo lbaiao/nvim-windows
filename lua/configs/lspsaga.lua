@@ -4,7 +4,7 @@ local saga = require 'lspsaga'
 saga.init_lsp_saga()
 
 -- lsp finder to find the cursor word definition and reference
-vim.keymap.set("n", "gh", require("lspsaga.finder").lsp_finder, { silent = true,noremap = true })
+vim.keymap.set("n", "gh", '<cmd>Lspsaga lsp_finder<cr>', { silent = true,noremap = true })
 
 -- code action
 local action = require("lspsaga.codeaction")
