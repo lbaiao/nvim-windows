@@ -4,7 +4,16 @@ vim.cmd([[
 
 	filetype plugin indent on    " required
 	syntax on
+
+
+	" hybrid line numbers
 	set number
+	augroup numbertoggle
+	  autocmd!
+	  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+	  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+	augroup END
+
 	set noswapfile
 	set hlsearch
 	set ignorecase
@@ -23,7 +32,7 @@ vim.cmd([[
 ]])
 
 -- Tab set to two spaces
--- vim.opt.tabstop = 2
--- vim.opt.shiftwidth = 2
--- vim.opt.softtabstop = 2
--- vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
