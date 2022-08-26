@@ -1,3 +1,10 @@
+require'nvim-treesitter.configs'.setup {
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  }
+}
+
 require('Comment').setup{
     ---Add a space b/w comment and the line
     ---@type boolean|fun():boolean
@@ -18,8 +25,13 @@ require('Comment').setup{
     ---@type table
     toggler = {
         ---Line-comment toggle keymap
-        line = '<leader>cc',
+        line = 'gb',
         ---Block-comment toggle keymap
-        block = 'gbc',
+        block = 'gc',
     },
+
+    ---Integrate with nvim-ts-context-commentstring
+    pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
 }
+
+
