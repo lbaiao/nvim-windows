@@ -30,6 +30,9 @@ require'nvim-treesitter.configs'.setup {
 
   -- indentation
   indent = {
-    enable = false
+    enable = true
   }
 }
+
+-- require('tree-sitter-typescript').typescript() // TypeScript grammar
+-- require('tree-sitter-typescript').tsx() // TSX grammar
