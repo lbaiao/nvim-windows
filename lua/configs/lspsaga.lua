@@ -18,7 +18,7 @@ end, { silent = true,noremap =true })
 vim.keymap.set("n", "gk", require("lspsaga.hover").render_hover_doc, { silent = true })
 
 -- show signature help
-vim.keymap.set("n", "gs", require("lspsaga.signaturehelp").signature_help, { silent = true,noremap = true})
+-- vim.keymap.set("n", "gs", require("lspsaga.signaturehelp").signature_help, { silent = true,noremap = true})
 
 -- rename
 vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, noremap = true })
