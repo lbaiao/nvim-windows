@@ -40,3 +40,6 @@ require("configs.telescope")
 
 -- impatient
 require('impatient').enable_profile()
+
+-- toggle terminal
+require('configs.toggleterm')
