@@ -37,6 +37,7 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive' 
   -- Theme
   use 'dracula/vim'
+  use ({ 'projekt0n/github-nvim-theme' })
   -- Status bar
   use {
       'nvim-lualine/lualine.nvim',
@@ -52,6 +53,8 @@ return require('packer').startup(function()
         'kyazdani42/nvim-web-devicons', -- optional, for file icons
       }
   }
+  -- startup
+  use 'mhinz/vim-startify'
   -- treesitter
   use 'nvim-treesitter/nvim-treesitter'
   -- telescope
