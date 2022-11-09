@@ -8,7 +8,7 @@ vim.keymap.set("n", "gh", '<cmd>Lspsaga lsp_finder<cr>', { silent = true,noremap
 
 -- code action
 local action = require("lspsaga.codeaction")
-vim.keymap.set("n", "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silent = true,noremap = true })
+vim.keymap.set("n", "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silent = true, noremap = true })
 vim.keymap.set("v", "<leader>ca", function()
     vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
     action.range_code_action()
@@ -24,7 +24,7 @@ vim.keymap.set("n", "gk", require("lspsaga.hover").render_hover_doc, { silent = 
 vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, noremap = true })
 
 -- preview definition
-vim.keymap.set("n", "gd", require("lspsaga.definition").preview_definition, { silent = true,noremap = true })
+vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true,noremap = true })
 
 -- show diagnostics
 vim.keymap.set("n", "<leader>cd", require("lspsaga.diagnostic").show_line_diagnostics, { silent = true,noremap = true })

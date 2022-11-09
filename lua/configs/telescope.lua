@@ -21,6 +21,11 @@ require('telescope').setup{
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
       }
+    },
+    packers = {
+      find_files = {
+        hidden = true
+      }
     }
   }
 }
