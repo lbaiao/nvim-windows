@@ -64,3 +64,4 @@ require('lspconfig')['sumneko_lua'].setup {
 }
 require('lspconfig')['omnisharp'].setup {}
 require('lspconfig')['dartls'].setup{}
+require('lspconfig')['pyright'].setup{}
