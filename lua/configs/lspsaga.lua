@@ -8,11 +8,7 @@ vim.keymap.set("n", "gh", '<cmd>Lspsaga lsp_finder<cr>', { silent = true,noremap
 
 -- code action
 local action = require("lspsaga.codeaction")
-vim.keymap.set("n", "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silent = true, noremap = true })
-vim.keymap.set("v", "<leader>ca", function()
-    vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
-    action.range_code_action()
-end, { silent = true,noremap =true })
+vim.keymap.set({"n", "v"}, "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silent = true, noremap = true })
 
 -- show hover doc and press twice will jumpto hover window
 vim.keymap.set("n", "gk", require("lspsaga.hover").render_hover_doc, { silent = true })
