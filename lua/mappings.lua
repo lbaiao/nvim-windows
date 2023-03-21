@@ -7,4 +7,7 @@ vim.cmd([[
 	" NERDTree mappings and settings
 	nnoremap <C-b> :NvimTreeToggle<CR>
 	map <leader>y "+y
+
+	" python
+	let g:python3_host_prog = 'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python310\\python.exe'
 ]])

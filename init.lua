@@ -43,3 +43,7 @@ require('impatient').enable_profile()
 
 -- toggle terminal
 require('configs.toggleterm')
+
+-- github copilot
+require('configs.copilot')
+

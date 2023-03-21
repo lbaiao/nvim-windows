@@ -68,6 +68,10 @@ return require('packer').startup(function()
   use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
     require("toggleterm").setup()
   end}
+  -- github copilot
+  use "github/copilot.vim"
+  -- jupyter notebooks
+  use 'untitled-ai/jupyter_ascending.vim'
   
 end)
 
