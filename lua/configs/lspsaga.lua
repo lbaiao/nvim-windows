@@ -1,7 +1,4 @@
-local saga = require 'lspsaga'
-
--- use default config
-saga.init_lsp_saga()
+require("lspsaga").setup({})
 
 -- lsp finder to find the cursor word definition and reference
 vim.keymap.set("n", "gh", '<cmd>Lspsaga lsp_finder<cr>', { silent = true,noremap = true })
@@ -22,13 +19,14 @@ vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, no
 -- preview definition
 vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true,noremap = true })
 
--- show diagnostics
-vim.keymap.set("n", "<leader>cd", require("lspsaga.diagnostic").show_line_diagnostics, { silent = true,noremap = true })
+-- show line diagnostics
 vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true,noremap= true })
+-- Show workspace diagnostics
+vim.keymap.set("n", "<leader>cw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
 
 -- jump diagnostic
-vim.keymap.set("n", "[e", require("lspsaga.diagnostic").goto_prev, { silent = true, noremap =true })
-vim.keymap.set("n", "]e", require("lspsaga.diagnostic").goto_next, { silent = true, noremap =true })
+vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true, noremap =true })
+vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true, noremap =true })
 
 -- or jump to error
 vim.keymap.set("n", "[E", function()
