@@ -38,19 +38,23 @@ return require('packer').startup(function()
   -- Theme
   use 'dracula/vim'
   use ({ 'projekt0n/github-nvim-theme' })
+  -- Icons
+  use 'nvim-tree/nvim-web-devicons'
   -- Status bar
   use {
       'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use 'kdheepak/tabline.nvim'
+  -- buffer line
+  --[[ use 'kdheepak/tabline.nvim' ]]
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   -- CTRLP
   -- use 'kien/ctrlp.vim' -- now implemented by telescope
   -- File explorer
   use {
-      'kyazdani42/nvim-tree.lua',
+      'nvim-tree/nvim-tree.lua',
       requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icons
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
       }
   }
   -- startup

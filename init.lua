@@ -33,7 +33,8 @@ require("configs.comments")
 -- theme
 require("configs.theme")
 require("configs.lualine")
-require("configs.tabline")
+require("configs.bufferline")
+--[[ require("configs.tabline") ]]
 
 -- telescope - fuzzy finder
 require("configs.telescope")
