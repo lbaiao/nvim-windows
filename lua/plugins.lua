@@ -13,10 +13,10 @@ return require('packer').startup(function()
   use { 'nvim-lua/plenary.nvim' }
   -- Configurations for Nvim LSP
   use 'neovim/nvim-lspconfig' 
-  use 'williamboman/nvim-lsp-installer'
-  use { "glepnir/lspsaga.nvim", branch = "main" }
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
+  use { "glepnir/lspsaga.nvim", branch = "main" }
+  use { "Decodetalkers/csharpls-extended-lsp.nvim" }
   -- Autocompletion
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
