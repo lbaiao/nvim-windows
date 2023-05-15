@@ -15,8 +15,8 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig' 
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
-  use { "glepnir/lspsaga.nvim", branch = "main" }
   use { "Decodetalkers/csharpls-extended-lsp.nvim" }
+  use { "glepnir/lspsaga.nvim", branch = "main" }
   -- Autocompletion
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -36,8 +36,9 @@ return require('packer').startup(function()
   -- GIT
   use 'tpope/vim-fugitive' 
   -- Theme
-  use 'dracula/vim'
-  use ({ 'projekt0n/github-nvim-theme' })
+  -- use 'dracula/vim'
+  -- use ({ 'projekt0n/github-nvim-theme' })
+  use { "ellisonleao/gruvbox.nvim" }
   -- Icons
   use 'nvim-tree/nvim-web-devicons'
   -- Status bar
