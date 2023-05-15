@@ -67,12 +67,13 @@ require('lspconfig')['lua_ls'].setup {
   },
 }
 
-local config = {
-  handlers = {
-    ["textDocument/definition"] = require('csharpls_extended').handler,
-  },
-}
-require('lspconfig')['csharp_ls'].setup(config)
+-- local config = {
+--   handlers = {
+--     ["textDocument/definition"] = require('csharpls_extended').handler,
+--   },
+-- }
+--[[ require('lspconfig')['csharp_ls'].setup(config) ]]
+require('configs.omnisharp')
 
 require('lspconfig')['dartls'].setup {}
 require('lspconfig')['pyright'].setup {}

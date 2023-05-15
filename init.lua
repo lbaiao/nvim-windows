@@ -14,7 +14,6 @@ require("mappings")
 require("configs.lsp")
 require("configs.lspsaga")
 require('configs.treesitter')
---[[ require('configs.omnisharp'); ]]
 
 -- autocompletion
 require("configs.autocompletion")
