@@ -21,6 +21,8 @@ vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true
 
 -- show line diagnostics
 vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true,noremap= true })
+-- Show buffer diagnostics
+vim.keymap.set("n", "<leader>cD", "<cmd>Lspsaga show_buf_diagnostics<CR>")
 -- Show workspace diagnostics
 vim.keymap.set("n", "<leader>cw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
 
