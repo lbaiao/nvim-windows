@@ -37,8 +37,9 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive' 
   -- Theme
   -- use 'dracula/vim'
-  -- use ({ 'projekt0n/github-nvim-theme' })
-  use { "ellisonleao/gruvbox.nvim" }
+  -- use { "ellisonleao/gruvbox.nvim" }
+  use "folke/tokyonight.nvim"
+  --
   -- Icons
   use 'nvim-tree/nvim-web-devicons'
   -- Status bar
