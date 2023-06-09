@@ -76,4 +76,12 @@ require('lspconfig')['lua_ls'].setup {
 require('configs.omnisharp')
 
 require('lspconfig')['dartls'].setup {}
-require('lspconfig')['pyright'].setup {}
+require'lspconfig'.pyright.setup{}
+--
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+}
