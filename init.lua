@@ -12,7 +12,7 @@ require("mappings")
 
 -- language server
 require("configs.lsp")
-require("configs.lspsaga")
+--[[ require("configs.lspsaga") ]]
 require('configs.treesitter')
 
 -- autocompletion

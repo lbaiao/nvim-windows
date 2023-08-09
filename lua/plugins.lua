@@ -15,7 +15,8 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig' 
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
-  use { "Decodetalkers/csharpls-extended-lsp.nvim" }
+  --[[ use { "Decodetalkers/csharpls-extended-lsp.nvim" } ]]
+  use { "Hoffs/omnisharp-extended-lsp.nvim" }
   use { "glepnir/lspsaga.nvim", branch = "main" }
   -- Autocompletion
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
