@@ -19,7 +19,7 @@ vim.keymap.set('n', 'gy', builtin.lsp_type_definitions, { silent = true, noremap
 
 require('telescope').setup{
   defaults = {
-    file_ignore_patterns = { "node_modules", "plugged" },
+    file_ignore_patterns = { "node_modules", "plugged", "bundle.js" },
     no_ignore = true,
     mappings = {
       i = {
