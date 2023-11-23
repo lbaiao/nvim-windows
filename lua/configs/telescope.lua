@@ -1,12 +1,12 @@
--- Find files using Telescope command-line sugar.
-vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>" )
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>"   )
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
-
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
+
+-- Find files using Telescope command-line sugar.
+vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 -- lsp picker
 vim.keymap.set('n', '<space>o', builtin.lsp_document_symbols, { silent = true, noremap = true })

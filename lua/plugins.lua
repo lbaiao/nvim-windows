@@ -1,84 +1,78 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
---
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
-
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  -- speed up loading lua modules; improve startup time
-  use 'lewis6991/impatient.nvim'
-  use { 'nvim-lua/plenary.nvim' }
-  -- Configurations for Nvim LSP
-  use 'neovim/nvim-lspconfig' 
-  use { 'williamboman/mason.nvim' }
-  use { 'williamboman/mason-lspconfig.nvim' }
-  --[[ use { "Decodetalkers/csharpls-extended-lsp.nvim" } ]]
-  use { "Hoffs/omnisharp-extended-lsp.nvim" }
-  use { "glepnir/lspsaga.nvim", branch = "main" }
+require("lazy").setup({
+  -- Load plugins faster
+  'lewis6991/impatient.nvim',
+  'nvim-lua/plenary.nvim',
+  -- LSP stuff
+  'neovim/nvim-lspconfig',
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  "Hoffs/omnisharp-extended-lsp.nvim",
+  -- { "glepnir/lspsaga.nvim", branch = "main" }
   -- Autocompletion
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use "ray-x/lsp_signature.nvim"
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  "ray-x/lsp_signature.nvim",
+  -- 'saadparwaiz1/cmp_luasnip', snipets
+  -- 'L3MON4D3/LuaSnip', -- snipets
   -- Autopairs
-  use 'windwp/nvim-autopairs'
+  'windwp/nvim-autopairs',
   -- Autoclose html tags
-  use 'windwp/nvim-ts-autotag'
+  'windwp/nvim-ts-autotag',
   -- Indentation
-  use 'nmac427/guess-indent.nvim'
-  use { 'lukas-reineke/indent-blankline.nvim' }
+  -- 'nmac427/guess-indent.nvim'
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   -- Comments
-  use 'numToStr/Comment.nvim'
-  use { "JoosepAlviste/nvim-ts-context-commentstring", requires = {  "nvim-treesitter" } }
+  'numToStr/Comment.nvim',
+  { "JoosepAlviste/nvim-ts-context-commentstring", dependencies = {  "nvim-treesitter" } },
   -- GIT
-  use 'tpope/vim-fugitive' 
+  'tpope/vim-fugitive',
   -- Theme
-  -- use 'dracula/vim'
-  -- use { "ellisonleao/gruvbox.nvim" }
-  use "folke/tokyonight.nvim"
-  --
+  -- 'dracula/vim'
+  -- { "ellisonleao/gruvbox.nvim" }
+  "folke/tokyonight.nvim",
   -- Icons
-  use 'nvim-tree/nvim-web-devicons'
+  'nvim-tree/nvim-web-devicons',
   -- Status bar
-  use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  -- buffer line
-  --[[ use 'kdheepak/tabline.nvim' ]]
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-  -- CTRLP
-  -- use 'kien/ctrlp.vim' -- now implemented by telescope
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+  },
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
   -- File explorer
-  use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      }
-  }
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = 'nvim-tree/nvim-web-devicons' 
+  },
   -- startup
-  use 'mhinz/vim-startify'
+  'mhinz/vim-startify',
   -- treesitter
-  use 'nvim-treesitter/nvim-treesitter'
+  'nvim-treesitter/nvim-treesitter',
   -- telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    -- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
   -- toggle terminal
-  use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-    require("toggleterm").setup()
-  end}
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
   -- github copilot
-  use "github/copilot.vim"
+  "github/copilot.vim",
   -- jupyter notebooks
-  use 'untitled-ai/jupyter_ascending.vim'
-  
-end)
-
+  --   'untitled-ai/jupyter_ascending.vim'
+})
