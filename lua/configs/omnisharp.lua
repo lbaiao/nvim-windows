@@ -81,7 +81,7 @@
 
 local pid = vim.fn.getpid()
 -- On linux/darwin if using a release build, otherwise under scripts/OmniSharp(.Core)(.cmd)
-local omnisharp_bin = "C:/Users/lucas/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.exe"
+local omnisharp_bin = "~/AppData/Local/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.exe"
 -- on Windows
 -- local omnisharp_bin = "/path/to/omnisharp/OmniSharp.exe"
 
@@ -93,6 +93,8 @@ local config = {
   -- rest of your settings
 }
 
-require'lspconfig'.omnisharp.setup(config)
+-- require'lspconfig'.omnisharp.setup(config)
+require'lspconfig'.omnisharp.setup{}
+--require'lspconfig'.csharp_ls.setup{}
 
 
