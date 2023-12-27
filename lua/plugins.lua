@@ -28,7 +28,7 @@ require("lazy").setup({
   'hrsh7th/cmp-nvim-lsp',
   "ray-x/lsp_signature.nvim",
   -- 'saadparwaiz1/cmp_luasnip', snipets
-  -- 'L3MON4D3/LuaSnip', -- snipets
+  'L3MON4D3/LuaSnip', -- snipets
   -- Autopairs
   'windwp/nvim-autopairs',
   -- Autoclose html tags
