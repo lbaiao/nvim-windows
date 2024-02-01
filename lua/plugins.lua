@@ -42,9 +42,10 @@ require("lazy").setup({
   -- GIT
   'tpope/vim-fugitive',
   -- Theme
-  -- 'dracula/vim'
-  -- { "ellisonleao/gruvbox.nvim" }
-  "folke/tokyonight.nvim",
+  -- 'dracula/vim',
+  -- { "ellisonleao/gruvbox.nvim" },
+  -- "folke/tokyonight.nvim",
+  { "embark-theme/vim" },
   -- Icons
   'nvim-tree/nvim-web-devicons',
   -- Status bar

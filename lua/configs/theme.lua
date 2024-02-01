@@ -9,4 +9,8 @@ vim.opt.syntax = 'ON' vim.opt.termguicolors = true
 
 -- tokyo night
 --[[ vim.opt.background = "dark" ]]
-vim.cmd.colorscheme 'tokyonight'
+--vim.cmd.colorscheme 'tokyonight'
+--
+-- embark
+vim.cmd.colorscheme 'embark'
+
