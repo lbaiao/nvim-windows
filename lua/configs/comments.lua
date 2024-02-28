@@ -1,9 +1,8 @@
-require'nvim-treesitter.configs'.setup {
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  }
-}
+-- require('ts_context_commentstring').setup {} and set vim.g.skip_ts_context_commentstring_module = true
+require('ts_context_commentstring').setup {}
+vim.g.skip_ts_context_commentstring_module = true
+
+require'nvim-treesitter.configs'.setup {}
 
 require('Comment').setup{
     ---Add a space b/w comment and the line
@@ -29,9 +28,4 @@ require('Comment').setup{
         ---Block-comment toggle keymap
         block = 'gc',
     },
-
-    ---Integrate with nvim-ts-context-commentstring
-    pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
 }
-
-
