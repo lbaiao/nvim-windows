@@ -85,3 +85,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.jsonls.setup {
   capabilities = capabilities,
 }
+
+require('configs.dart')
+
+-- require'lspconfig'.sonarlint.setup{}

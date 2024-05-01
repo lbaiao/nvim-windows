@@ -22,6 +22,21 @@ require("lazy").setup({
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   "Hoffs/omnisharp-extended-lsp.nvim",
+  -- UI stuff
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
+  -- dart/flutter
+  {
+        'akinsho/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true,
+  },
   -- { "glepnir/lspsaga.nvim", branch = "main" }
   -- Autocompletion
   'hrsh7th/nvim-cmp',
