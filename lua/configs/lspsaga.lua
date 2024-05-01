@@ -8,7 +8,7 @@ local action = require("lspsaga.codeaction")
 vim.keymap.set({"n", "v"}, "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silent = true, noremap = true })
 
 -- show hover doc and press twice will jumpto hover window
-vim.keymap.set("n", "gk", require("lspsaga.hover").render_hover_doc, { silent = true })
+-- vim.keymap.set("n", "gk", require("lspsaga.hover").render_hover_doc, { silent = true })
 
 -- show signature help
 -- vim.keymap.set("n", "gs", require("lspsaga.signaturehelp").signature_help, { silent = true,noremap = true})
@@ -20,7 +20,7 @@ vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, no
 vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true,noremap = true })
 
 -- show line diagnostics
-vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true,noremap= true })
+-- vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true,noremap= true })
 -- Show buffer diagnostics
 vim.keymap.set("n", "<leader>cD", "<cmd>Lspsaga show_buf_diagnostics<CR>")
 -- Show workspace diagnostics
