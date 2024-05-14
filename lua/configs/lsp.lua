@@ -19,7 +19,7 @@ vim.keymap.set('n', '<space>a', vim.diagnostic.setloclist, opts)
 -- --   -- See `:help vim.lsp.*` for documentation on any of the below functions
 local bufopts = { noremap = true, silent = false }
 --[[ vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts) ]]
--- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
 --[[ vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts) ]]
 -- vim.keymap.set('n', 'gk', vim.lsp.buf.signature_help, bufopts)
@@ -31,7 +31,7 @@ vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
 --[[ vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, bufopts) ]]
 vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
---[[ vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts) ]]
+-- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
 end, opts)
