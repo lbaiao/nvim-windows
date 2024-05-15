@@ -14,10 +14,10 @@ vim.keymap.set({"n", "v"}, "<leader>ca", '<cmd>Lspsaga code_action<CR>', { silen
 -- vim.keymap.set("n", "gs", require("lspsaga.signaturehelp").signature_help, { silent = true,noremap = true})
 
 -- rename
-vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, noremap = true })
+-- vim.keymap.set("n", "<leader>rn", '<cmd>Lspsaga rename<cr>', { silent = true, noremap = true })
 
 -- preview definition
-vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true,noremap = true })
+-- vim.keymap.set("n", "gd", '<cmd>Lspsaga preview_definition<cr>', { silent = true,noremap = true })
 
 -- show line diagnostics
 -- vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true,noremap= true })

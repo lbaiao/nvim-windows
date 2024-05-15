@@ -49,8 +49,8 @@ require("lazy").setup({
   -- Autoclose html tags
   'windwp/nvim-ts-autotag',
   -- Indentation
-  -- 'nmac427/guess-indent.nvim'
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  'nmac427/guess-indent.nvim',
+  -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   -- Comments
   'numToStr/Comment.nvim',
   { "JoosepAlviste/nvim-ts-context-commentstring", dependencies = {  "nvim-treesitter" } },
