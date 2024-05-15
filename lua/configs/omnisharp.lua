@@ -87,14 +87,17 @@ local omnisharp_bin = "~/AppData/Local/nvim-data/mason/packages/omnisharp/libexe
 
 local config = {
   handlers = {
-    ["textDocument/definition"] = require('omnisharp_extended').handler,
+    ["textDocument/definition"] = require('omnisharp_extended').definition_handler,
+    ["textDocument/typeDefinition"] = require('omnisharp_extended').type_definition_handler,
+    ["textDocument/references"] = require('omnisharp_extended').references_handler,
+    ["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
   },
-  cmd = { omnisharp_bin, '--languageserver' , '--hostPID', tostring(pid) },
+  -- cmd = { omnisharp_bin, '--languageserver' , '--hostPID', tostring(pid) },
   -- rest of your settings
 }
 
--- require'lspconfig'.omnisharp.setup(config)
-require'lspconfig'.omnisharp.setup{}
+require'lspconfig'.omnisharp.setup(config)
+-- require'lspconfig'.omnisharp.setup{}
 --require'lspconfig'.csharp_ls.setup{}
 
 
