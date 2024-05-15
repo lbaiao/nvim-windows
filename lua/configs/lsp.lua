@@ -28,7 +28,7 @@ vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
 --   vim.keymap.set('n', '<leader>wl', function()
 --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 --   end, bufopts)
---[[ vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, bufopts) ]]
+vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
 --[[ vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts) ]]
