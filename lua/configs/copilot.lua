@@ -13,3 +13,13 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 --     ["go"] = true,
 --     ["python"] = true,
 -- }
+--
+
+
+local chat = require('CopilotChat')
+vim.keymap.set({ 'n', 'v' }, '<leader>i', chat.toggle, { desc = 'AI Toggle' })
+
+require("CopilotChat").setup {
+  -- debug = true, -- Enable debugging
+  -- See Configuration section for rest
+}
