@@ -15,14 +15,16 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 -- }
 --
 
+local chat = require('CopilotChat')
+
 function my_ask_func(question)
     local input = vim.fn.input("Quick Chat: ")
     if input ~= "" then
-        require('CopilotChat').ask(input, { selection = require("CopilotChat.select").buffer })
+        chat.ask(input, { selection = require("CopilotChat.select").buffer })
     end
+    chat.open()
 end
 
-local chat = require('CopilotChat')
 vim.keymap.set({ 'n', 'v' }, '<leader>it', chat.toggle, { desc = 'AI Toggle' })
 -- Quick chat with Copilot
 vim.keymap.set({ 'n', 'v' }, '<leader>ia', my_ask_func, { desc = 'AI Toggle' })
