@@ -12,5 +12,8 @@ vim.opt.syntax = 'ON' vim.opt.termguicolors = true
 --vim.cmd.colorscheme 'tokyonight'
 --
 -- embark
-vim.cmd.colorscheme 'embark'
+-- vim.cmd.colorscheme 'embark'
+--
+-- lackluster
+vim.cmd.colorscheme 'lackluster'
 
