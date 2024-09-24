@@ -61,7 +61,8 @@ require("lazy").setup({
   -- { "ellisonleao/gruvbox.nvim" },
   -- "folke/tokyonight.nvim",
   -- { "embark-theme/vim" },
-  { "slugbyte/lackluster.nvim" },
+  -- { "slugbyte/lackluster.nvim" },
+  { "mofiqul/vscode.nvim" },
   -- Icons
   'nvim-tree/nvim-web-devicons',
   -- Status bar
