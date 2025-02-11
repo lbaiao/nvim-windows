@@ -22,21 +22,21 @@ require("lazy").setup({
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   "Hoffs/omnisharp-extended-lsp.nvim",
-  -- UI stuff
-  {
-    'stevearc/dressing.nvim',
-    opts = {},
-  },
+  -- -- UI stuff
+  -- {
+  --   'stevearc/dressing.nvim',
+  --   opts = {},
+  -- },
   -- dart/flutter
-  {
-        'akinsho/flutter-tools.nvim',
-        lazy = false,
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'stevearc/dressing.nvim', -- optional for vim.ui.select
-        },
-        config = true,
-  },
+  -- {
+  --       'akinsho/flutter-tools.nvim',
+  --       lazy = false,
+  --       dependencies = {
+  --           'nvim-lua/plenary.nvim',
+  --           'stevearc/dressing.nvim', -- optional for vim.ui.select
+  --       },
+  --       config = true,
+  -- },
   -- { "glepnir/lspsaga.nvim", branch = "main" }
   -- Autocompletion
   'hrsh7th/nvim-cmp',
@@ -45,15 +45,15 @@ require("lazy").setup({
   -- 'saadparwaiz1/cmp_luasnip', snipets
   'L3MON4D3/LuaSnip', -- snipets
   -- Autopairs
-  'windwp/nvim-autopairs',
+  -- 'windwp/nvim-autopairs',
   -- Autoclose html tags
-  'windwp/nvim-ts-autotag',
+  -- 'windwp/nvim-ts-autotag',
   -- Indentation
-  'nmac427/guess-indent.nvim',
+  -- 'nmac427/guess-indent.nvim',
   -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   -- Comments
-  'numToStr/Comment.nvim',
-  { "JoosepAlviste/nvim-ts-context-commentstring", dependencies = {  "nvim-treesitter" } },
+  -- 'numToStr/Comment.nvim',
+  -- { "JoosepAlviste/nvim-ts-context-commentstring", dependencies = {  "nvim-treesitter" } },
   -- GIT
   'tpope/vim-fugitive',
   -- Theme
@@ -62,15 +62,15 @@ require("lazy").setup({
   -- "folke/tokyonight.nvim",
   -- { "embark-theme/vim" },
   -- { "slugbyte/lackluster.nvim" },
-  { "mofiqul/vscode.nvim" },
+  -- { "mofiqul/vscode.nvim" },
   -- Icons
-  'nvim-tree/nvim-web-devicons',
+  -- 'nvim-tree/nvim-web-devicons',
   -- Status bar
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
-  },
-  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  -- {
+  --   'nvim-lualine/lualine.nvim',
+  --   dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+  -- },
+  -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
   -- File explorer
   {
     'nvim-tree/nvim-tree.lua',
@@ -93,7 +93,7 @@ require("lazy").setup({
   "github/copilot.vim",
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
+    branch = "main",
     dependencies = {
       { "github/copilot.vim" }, -- or github/copilot.vim
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper

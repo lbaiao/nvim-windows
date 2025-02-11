@@ -1,6 +1,9 @@
 -- import all plugins
 require("plugins")
 
+-- impatient
+require('impatient').enable_profile()
+
 -- file explorer
 require("configs.nvim-tree")
 
@@ -19,28 +22,25 @@ require('configs.treesitter')
 require("configs.autocompletion")
 
 -- autopairs
-require("configs.autopairs")
+-- require("configs.autopairs")
 
 -- autotags
-require("configs.autotag")
+-- require("configs.autotag")
 
 -- indentation
-require("configs.indentation")
+-- require("configs.indentation")
 
 -- comments
-require("configs.comments")
+-- require("configs.comments")
 
 -- theme
-require("configs.theme")
-require("configs.lualine")
-require("configs.bufferline")
+-- require("configs.theme")
+-- require("configs.lualine")
+-- require("configs.bufferline")
 --[[ require("configs.tabline") ]]
 
 -- telescope - fuzzy finder
 require("configs.telescope")
-
--- impatient
-require('impatient').enable_profile()
 
 -- toggle terminal
 require('configs.toggleterm')

@@ -17,5 +17,5 @@ vim.opt.syntax = 'ON' vim.opt.termguicolors = true
 -- lackluster
 -- vim.cmd.colorscheme 'lackluster'
 
-vim.cmd.colorscheme 'vscode'
+-- vim.cmd.colorscheme 'vscode'
 
