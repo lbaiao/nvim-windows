@@ -5,7 +5,6 @@ vim.cmd([[
 	filetype plugin indent on    " required
 	syntax on
 
-
 	" hybrid line numbers
 	set number
 	augroup numbertoggle
@@ -24,6 +23,8 @@ vim.cmd([[
 	set splitright
 	" do not select numbers when selecting with mouse
 	set mouse=a
+    set clipboard^=unnamed,unnamedplus
+
 
 	set wildignore+=*/data/*,*.so,*.swp,*.zip,*/node_modules/*,*/plugged/*    " MacOSX/Linux
 

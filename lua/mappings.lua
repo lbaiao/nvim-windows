@@ -7,7 +7,8 @@ vim.cmd([[
 	" NERDTree mappings and settings
 	nnoremap <C-b> :NvimTreeToggle<CR>
 	map <leader>y "+y
+    map <C-S-v> "+p
 
 	" python
-	let g:python3_host_prog = 'C:\\Users\\lucas\\AppData\\Local\\Programs\\Python\\Python310\\python.exe'
+	let g:python3_host_prog = 'C:\\Users\\lucasp\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
 ]])

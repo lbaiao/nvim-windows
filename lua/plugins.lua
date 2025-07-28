@@ -23,10 +23,10 @@ require("lazy").setup({
   'williamboman/mason-lspconfig.nvim',
   "Hoffs/omnisharp-extended-lsp.nvim",
   -- -- UI stuff
-  -- {
-  --   'stevearc/dressing.nvim',
-  --   opts = {},
-  -- },
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
   -- dart/flutter
   -- {
   --       'akinsho/flutter-tools.nvim',
@@ -71,6 +71,7 @@ require("lazy").setup({
   --   dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
   -- },
   -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  { "EdenEast/nightfox.nvim" }, -- lazy
   -- File explorer
   {
     'nvim-tree/nvim-tree.lua',
